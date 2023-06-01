@@ -53,15 +53,15 @@ public class FeetToCm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblFeet = new javax.swing.JLabel();
         txtFt = new javax.swing.JTextField();
         lblInch = new javax.swing.JLabel();
         txtInch = new javax.swing.JTextField();
         btnConvert = new javax.swing.JButton();
         lblFtInch = new javax.swing.JLabel();
         txtRes = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        menuBar = new javax.swing.JMenuBar();
+        fileMenu = new javax.swing.JMenu();
         menuItemWeight = new javax.swing.JMenuItem();
         exitMenu = new javax.swing.JMenu();
 
@@ -69,8 +69,8 @@ public class FeetToCm extends javax.swing.JFrame {
         setTitle("Height Converter");
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Feet:");
+        lblFeet.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblFeet.setText("Feet:");
 
         lblInch.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblInch.setText("Inches:");
@@ -87,7 +87,7 @@ public class FeetToCm extends javax.swing.JFrame {
         txtRes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txtRes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        jMenu1.setText("File");
+        fileMenu.setText("File");
 
         menuItemWeight.setText("Weight Converter");
         menuItemWeight.addActionListener(new java.awt.event.ActionListener() {
@@ -95,9 +95,9 @@ public class FeetToCm extends javax.swing.JFrame {
                 menuItemWeightActionPerformed(evt);
             }
         });
-        jMenu1.add(menuItemWeight);
+        fileMenu.add(menuItemWeight);
 
-        jMenuBar1.add(jMenu1);
+        menuBar.add(fileMenu);
 
         exitMenu.setText("Exit");
         exitMenu.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -105,19 +105,20 @@ public class FeetToCm extends javax.swing.JFrame {
                 exitMenuMouseClicked(evt);
             }
         });
-        jMenuBar1.add(exitMenu);
+        menuBar.add(exitMenu);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(menuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtRes, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1)
+                        .addComponent(lblFeet)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
@@ -130,10 +131,7 @@ public class FeetToCm extends javax.swing.JFrame {
                                 .addGap(51, 51, 51)
                                 .addComponent(btnConvert)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblFtInch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(txtRes, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(lblFtInch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -141,7 +139,7 @@ public class FeetToCm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(lblFeet)
                     .addComponent(txtFt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblInch)
                     .addComponent(txtInch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -149,9 +147,9 @@ public class FeetToCm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblFtInch, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnConvert))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtRes, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -213,11 +211,11 @@ public class FeetToCm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnConvert;
     private javax.swing.JMenu exitMenu;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu fileMenu;
+    private javax.swing.JLabel lblFeet;
     private javax.swing.JLabel lblFtInch;
     private javax.swing.JLabel lblInch;
+    private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem menuItemWeight;
     private javax.swing.JTextField txtFt;
     private javax.swing.JTextField txtInch;
