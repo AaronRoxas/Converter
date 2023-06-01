@@ -43,7 +43,7 @@ public class MainFrame extends javax.swing.JFrame {
         btnSwitch = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        menuItemHeight = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -128,12 +128,22 @@ public class MainFrame extends javax.swing.JFrame {
 
         jMenu1.setText("File");
 
-        jMenuItem1.setText("Feet to Cm");
-        jMenu1.add(jMenuItem1);
+        menuItemHeight.setText("Height Converter");
+        menuItemHeight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemHeightActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuItemHeight);
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("Exit");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -258,6 +268,18 @@ public class MainFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnSwitchActionPerformed
 
+    private void menuItemHeightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemHeightActionPerformed
+        // TODO add your handling code here:
+        FeetToCm ftc = new FeetToCm();
+        ftc.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_menuItemHeightActionPerformed
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jMenu2MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -302,9 +324,9 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblDisplay;
     private javax.swing.JLabel lblInput;
+    private javax.swing.JMenuItem menuItemHeight;
     // End of variables declaration//GEN-END:variables
 }
